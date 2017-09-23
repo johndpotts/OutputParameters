@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace OutputParameters
 {
@@ -14,6 +15,9 @@ namespace OutputParameters
             GetData(out name, out gender);
             int age = GetAge();
             Console.WriteLine("Name: {0} \n Age: {1} \n Gender: {2}", name, age, gender);
+            Console.ReadLine();
+            string message = ConfigurationManager.AppSettings["message"];
+            Console.WriteLine("The message is: {0}", message);
             Console.ReadLine();
         }
        
